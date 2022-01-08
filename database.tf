@@ -41,6 +41,8 @@ module "db" {
 
   # DB subnet group
   subnet_ids = [aws_subnet.internal01.id, aws_subnet.internal02.id]
+  family = "mysql5.7"
+  major_engine_version = "5.7"
 
   # Database Deletion Protection
   deletion_protection = false
