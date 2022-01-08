@@ -28,7 +28,7 @@ resource "aws_security_group" "lb_SG" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = [aws_security_group.allow_tcp.id]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
